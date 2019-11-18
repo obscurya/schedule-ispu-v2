@@ -1,0 +1,58 @@
+.container-lockscreen {
+  display: flex;
+  height: 100%;
+}
+
+/* .container-lockscreen > div {
+  width: 50%;
+} */
+
+.lockscreen-props {
+  width: 300px;
+  padding: 0 30px 8px 0;
+  overflow-y: scroll;
+}
+
+.lockscreen-prop {
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.lockscreen-prop span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.lockscreen-prop input {
+  width: 100%;
+}
+
+.lockscreen-props .input-radio label {
+  width: 100%;
+  border-radius: 3px;
+  word-break: break-all;
+}
+
+.lockscreen-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: calc(100% - 250px);
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.lockscreen-preview-image {
+  display: none;
+}
+
+.lockscreen-preview canvas {
+  display: none;
+}
+
+.lockscreen-preview img {
+  /* display: none; */
+  border-radius: 3px;
+}

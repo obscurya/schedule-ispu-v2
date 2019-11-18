@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: 14px 'Montserrat', sans-serif;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.schedule-main {
+  margin-bottom: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.schedule-main:last-child {
+  margin-bottom: 0;
+}
+
+.schedule .day {
+  display: inline-block;
+  width: calc(100% / 6);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.schedule .day:last-child {
+  border: none;
+}
+
+.schedule .day-header {
+  padding: 15px 22px;
+  font-size: 12px;
+  color: #616161;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.schedule .day-body {
+  position: relative;
+  overflow: hidden;
+}
+
+/* .schedule .day-body .time-line {
+  position: absolute;
+  top: calc(-15px / 2);
+  width: 100%;
+  height: 15px;
+  background: rgba(0, 0, 0, 0.1);
+} */
+
+.schedule .day-body .time-line {
+  position: absolute;
+  top: calc(-15px / 2);
+  width: 100%;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.schedule .day-body .lesson {
+  cursor: pointer;
+  padding: 5px;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.schedule .day-body .lesson:last-child {
+  border: none;
+}
+
+/* .schedule .lesson {
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+}
+
+.schedule .lesson:hover {
+  outline: 1px solid rgba(0, 0, 0, 0.6);
+} */
+
+.schedule .day-body .lesson-body-empty {
+  height: 100%;
+  padding: 15px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.schedule .day-body .lesson-body {
+  height: 100%;
+  padding: 15px;
+  background: #fff;
+  border-left: 2px solid;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.schedule .day-body .lesson-body > div,
+.schedule .day-body .lesson-body-empty > div {
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 1.5em;
+}
+
+.schedule .day-body .lesson-subject {
+  font-weight: 500;
+}
+
+.schedule .day-body .lesson-teacher {
+  font-size: 12px;
+  color: #616161;
+}
+
+.schedule .day-body .lesson-room {
+  font-size: 12px;
+  color: #616161;
+}
+
+.schedule .day-body .lesson-time {
+  font-size: 12px;
+  text-align: right;
+  color: #616161;
+}
+
+.lockscreen-preview-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.lockscreen-schedule-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: center no-repeat;
+  background-size: cover;
+  transform: scale(1.1);
+}
+
+.lockscreen-schedule-group {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: -1px;
+}
+
+.lockscreen-schedule-group .schedule {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  border-top: 1px solid #000;
+}
+
+.lockscreen-schedule-group .schedule:last-child {
+  border-bottom: 1px solid #000;
+}
+
+.lockscreen-schedule-group .schedule .day {
+  border-color: #000;
+}
+
+.lockscreen-schedule-group .schedule .day-header {
+  padding: 5px;
+  background: none;
+  border-color: #000;
+  color: #000;
+}
+
+.lockscreen-schedule-group .schedule .day-body .lesson {
+  cursor: default;
+  padding: 0;
+  background: none;
+  border-color: #000;
+}
+
+.lockscreen-schedule-group .schedule .day-body .lesson-body-empty {
+  padding: 5px;
+  background: none;
+}
+
+.lockscreen-schedule-group .schedule .day-body .lesson-body {
+  padding: 5px;
+  background: none;
+  border-left: none;
+  border-radius: 0;
+}
+
+.lockscreen-schedule-group .schedule .day-body .lesson-time {
+  color: #000;
+}
+
+.schedule .day-body .lesson .lesson-type-lecture {
+  background: rgba(255, 255, 0, 0.25);
+  border-color: rgba(255, 255, 0, 0.75);
+}
+
+.schedule .day-body .lesson .lesson-type-lab {
+  background: rgba(170, 0, 255, 0.25);
+  border-color: rgba(170, 0, 255, 0.75);
+}
+
+.schedule .day-body .lesson .lesson-type-course {
+  background: rgba(255, 23, 68, 0.25);
+  border-color: rgba(255, 23, 68, 0.75);
+}
+
+.schedule .day-body .lesson .lesson-type-seminar {
+  background: rgba(100, 221, 23, 0.25);
+  border-color: rgba(100, 221, 23, 0.75);
+}
+
+.schedule .day-body .lesson .lesson-type-military {
+  background: rgba(0, 229, 255, 0.25);
+  border-color: rgba(0, 229, 255, 0.75);
+}
+
+.schedule .day-body .lesson .lesson-type-lecture > div,
+.schedule .day-body .lesson .lesson-type-lab > div,
+.schedule .day-body .lesson .lesson-type-course > div,
+.schedule .day-body .lesson .lesson-type-seminar > div,
+.schedule .day-body .lesson .lesson-type-military > div {
+  color: #000;
+}
+
+.schedule-week-number {
+  width: 100%;
+  padding: 15px 22px;
+  font-size: 12px;
+  color: #616161;
+  background: rgba(0, 0, 0, 0.1);
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .schedule-main {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+  }
+
+  .schedule {
+    white-space: nowrap;
+    overflow: auto;
+  }
+
+  .schedule .day {
+    width: calc(100% / 3);
+  }
+
+  .schedule .day .day-header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 10px 12px;
+    z-index: 1;
+  }
+
+  .schedule .day .day-body .lesson .lesson-body,
+  .schedule .day .day-body .lesson .lesson-body-empty {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 750px) {
+  .schedule .day {
+    width: calc(100% / 2);
+  }
+}
+
+@media (max-width: 400px) {
+  .schedule .day {
+    width: 100%;
+  }
+}

@@ -1,0 +1,107 @@
+.modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.modal-window {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.modal-window-header {
+  display: table;
+}
+
+.modal-window-header > div {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 30px;
+}
+
+.modal-window-header-name {
+  width: 100%;
+  font-weight: 500;
+}
+
+.modal-window-header-close {
+  font-size: 32px;
+  line-height: 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-window-header-close:hover {
+  cursor: pointer;
+  color: #000;
+}
+
+.modal-window-body {
+  /* height: 100%; */
+  padding: 0 30px;
+}
+
+.modal-window-body > label {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.modal-window-body > label:last-child {
+  margin: 0;
+}
+
+.modal-window-body > label .input {
+  width: 100%;
+  padding: 0 0 10px 0;
+  border: solid rgba(0, 0, 0, 0.1);
+  border-width: 0 0 1px 0;
+}
+
+.modal-window-body > label select {
+  cursor: pointer;
+}
+
+.modal-window-buttons {
+  padding: 30px;
+}
+
+.modal-window-buttons button:first-child {
+  margin-right: 15px;
+}
+
+/* Lockscreen */
+
+.modal-lockscreen {
+  /* max-width: 100%; */
+  max-width: 1200px;
+  height: 100%;
+}
+
+.modal-lockscreen .modal-window-body {
+  height: 100%;
+  padding: 0 0 0 30px;
+  /* overflow-y: scroll; */
+  overflow: hidden;
+}
